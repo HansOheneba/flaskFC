@@ -1,7 +1,12 @@
-{% extends "nav.html" %}  {% block content %}
-
-<div class="h-full flex items-center justify-center">
-    <h1 class="text-4xl">This is the about page</h1>
+{% extends "root.html" %} 
+{% block body %}
+{% include 'nav.html' %}
+<div class="h-20 bg-blue-900"></div>
+<div class="flex items-center justify-center">
+    <h1 class="text-4xl">This is the about page
+        
+    </h1>
+    
 </div>
-
+ {% include 'footer.html' %}
 {% endblock %} 
