@@ -1,52 +1,66 @@
-<footer class="bg-blue-900 py-10 text-white px-32 font-inter">
+<footer class="bg-blue-900 py-10 text-white px-8 lg:px-32 font-inter">
 
-  <div class="flex justify-around py-20">
-    <div class=" ">
-      <img class="h-60" src="{{url_for('static', filename='img/helmet.png')}}" alt="Company Logo">
+  <div class="flex flex-col lg:flex-row justify-around py-10 lg:py-20">
+    <!-- Logo Section -->
+    <div class="mb-8 lg:mb-0 flex justify-center">
+      <img class="h-40 lg:h-60" src="{{url_for('static', filename='img/helmet.png')}}" alt="Company Logo">
     </div>
 
-    <div class="flex flex-col justify-center items-center text-center w-1/2">
+    <!-- Tagline Section -->
+    <div class="flex flex-col justify-center items-center text-center w-full lg:w-1/2">
       <div class="py-5 flex flex-col gap-5">
-        <h1 class="font-bold text-4xl leading-relaxed">Building the Foundations for a Better Tomorrow.</h1>
-        <p class="text-xl">Start your project with us today!</p>
+        <h1 class="font-bold text-2xl lg:text-4xl leading-relaxed">
+          Building the Foundations for a Better Tomorrow.
+        </h1>
+        <p class="text-md lg:text-xl">Start your project with us today!</p>
       </div>
-      <button class="bg-white w-fit text-airbanBlue text-xs p-3 rounded-full font-semibold text-black">Request a Quote</button>
+      <button class="bg-white w-fit text-airbanBlue text-sm lg:text-xs p-3 rounded-full font-semibold text-black">
+        Request a Quote
+      </button>
     </div>
   </div>
 
-  <div class="flex justify-between w-11/12 items-center mx-auto py-20">
+  <div class="flex flex-col lg:flex-row justify-between items-center w-full lg:w-11/12 mx-auto py-10 lg:py-20 gap-10 lg:gap-0">
 
-    <div class="flex flex-col w-fit justify-center gap-6">
-      <div>
-        <img src="https://placehold.co/100x50" alt="Logo">
-      </div>
-      <div class="flex gap-4 justify-center">
+    <!-- Social Media Section -->
+    <div class="flex flex-col items-center gap-6">
+      <img src="https://placehold.co/100x50" alt="Logo">
+      <div class="flex gap-4">
         <a href="#">
-          <div class="border border-black rounded-full w-fit px-2 text-white"><i class="fa-brands fa-facebook-f fa-2xs"></i></div>
+          <div class="border border-black rounded-full w-fit px-2 text-white">
+            <i class="fa-brands fa-facebook-f fa-sm"></i>
+          </div>
         </a>
         <a href="#">
-          <div class="border border-black rounded-full w-fit px-2 text-white"><i class="fa-brands fab fa-twitter fa-2xs"></i></div>
+          <div class="border border-black rounded-full w-fit px-2 text-white">
+            <i class="fa-brands fa-twitter fa-sm"></i>
+          </div>
         </a>
         <a href="#">
-          <div class="border border-black rounded-full w-fit px-2 text-white"><i class="fa-brands fa-linkedin-in fa-2xs"></i></div>
+          <div class="border border-black rounded-full w-fit px-2 text-white">
+            <i class="fa-brands fa-linkedin-in fa-sm"></i>
+          </div>
         </a>
         <a href="#">
-          <div class="border border-black rounded-full w-fit px-2 text-white"><i class="fa-brands fa-instagram fa-2xs"></i></div>
+          <div class="border border-black rounded-full w-fit px-2 text-white">
+            <i class="fa-brands fa-instagram fa-sm"></i>
+          </div>
         </a>
       </div>
     </div>
 
-    <div class="flex px-10 gap-10">
-      <div class="px-10">
-        <h1 class="font-bold py-3">Company</h1>
-        <ul class="text-xs font-thin">
+    <!-- Navigation Links -->
+    <div class="flex flex-col lg:flex-row gap-10 lg:gap-20">
+      <div>
+        <h1 class="font-bold py-3 text-center lg:text-left">Company</h1>
+        <ul class="text-sm font-thin space-y-2 text-center lg:text-left">
           <li><a href="#">About Us</a></li>
           <li><a href="#">Our Projects</a></li>
         </ul>
       </div>
-      <div class="px-10">
-        <h1 class="font-bold py-3">Quick Links</h1>
-        <ul class="text-xs font-thin">
+      <div>
+        <h1 class="font-bold py-3 text-center lg:text-left">Quick Links</h1>
+        <ul class="text-sm font-thin space-y-2 text-center lg:text-left">
           <li><a href="#">Services</a></li>
           <li><a href="#">Testimonials</a></li>
           <li><a href="#">Contact Us</a></li>
@@ -55,9 +69,11 @@
     </div>
   </div>
 
-  <hr>
-  <div class="flex justify-between py-10">
-    <p>&copy; 2025 Construction Co. All Rights Reserved</p>
-    <p><a href="#">User Terms and Conditions</a> | <a href="#">Privacy Policy</a></p>
+  <hr class="border-gray-600">
+  <div class="flex flex-col lg:flex-row justify-between items-center py-10 text-center lg:text-left">
+    <p class="text-sm">&copy; 2025 Construction Co. All Rights Reserved</p>
+    <p class="text-sm">
+      <a href="#">User Terms and Conditions</a> | <a href="#">Privacy Policy</a>
+    </p>
   </div>
 </footer>

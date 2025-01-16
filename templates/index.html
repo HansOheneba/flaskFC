@@ -1,18 +1,35 @@
-{% extends "root.html" %} 
+{% extends "root.html" %}
 {% block body %}
 {% include 'nav.html' %}
-<div class=" h-[80vh] bg-cover bg-center relative" style="background-image: url('https://images.unsplash.com/photo-1512207736890-6ffed8a84e8d?q=80&w=2079&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')">
+
+<div id="home-background" class="h-[80vh] bg-cover bg-center relative opacity-0 transition-opacity duration-1000">
     <div class="absolute inset-0 bg-black bg-opacity-50"></div>
     <div class="absolute inset-0 flex flex-col gap-7 items-center justify-center">
         <h1 class="text-7xl font-bold text-white">Building Dreams, Crafting Realities</h1>
         <button class="relative h-12 overflow-hidden rounded bg-neutral-950 px-5 py-2.5 text-white transition-all duration-300 hover:bg-neutral-800 hover:ring-2 hover:ring-neutral-800 hover:ring-offset-2"><span class="relative">Build Your Dream</span></button>
     </div>
 </div>
+
 <div class="flex items-center justify-center">
-    <h1 class="text-4xl">This is the home page
-        
-    </h1>
-    
+    <h1 class="text-4xl">This is the home page</h1>
 </div>
- {% include 'footer.html' %}
-{% endblock %} 
+
+{% include 'footer.html' %}
+
+<script>
+  window.onload = function() {
+    const imageUrl = 'https://images.unsplash.com/photo-1512207736890-6ffed8a84e8d?q=80&w=2079&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D';
+    const img = new Image();
+
+    img.onload = function() {
+      // Set the background image and make the container visible
+      document.getElementById('home-background').style.backgroundImage = `url('${imageUrl}')`;
+      document.getElementById('home-background').classList.remove('opacity-0');
+      document.getElementById('home-background').classList.add('opacity-100');
+    };
+
+    img.src = imageUrl;
+  }
+</script>
+
+{% endblock %}
